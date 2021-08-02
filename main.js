@@ -9,29 +9,28 @@ player_y = 10;
 var player_object = '';
 
 function player_update(){
-    fabric.Image.fromURl("player.png", function(Img){player_object=Img
+    fabric.Image.fromURl("player.png", function(Img){player_object=Img;
     player_object.scaleToWidth(150);
     player_object.scaleToHeigth(140);
     player_object.set({
     top:player_y,
     left:player_x
     });
-    Canvas.add(player_object
-        )
+    Canvas.add(player_object);
 
     });
 
 }
 
 function new_image(get_image){
-    fabric.Image.fromURl(get_image, function(Img) { block_image_object=Img
+    fabric.Image.fromURl(get_image, function(Img) { block_image_object=Img;
     block_image_object.scaleToWidth(block_width);
     block_image_object.scaleToHeigth(block_height);
     block_image_object.set({
     top:player_y,
     left:player_x
     });
-    Canvas.add(block_image_object)
+    Canvas.add(block_image_object);
 
     });
 }
@@ -127,7 +126,7 @@ function my_keydown(e){
 function up(){
 
     if (player_y >=0){
-      player_y=player_y-block_height;
+      player_y = player_y-block_height;
       console.log('Height of the player is ='+ block_height);
       console.log("When up arrow key is pressed X ="+ player_x + ",Y ="+ player_y);
      canvas.remove(player_object);
